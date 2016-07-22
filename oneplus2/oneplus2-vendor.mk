@@ -115,6 +115,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/oneplus2/proprietary/framework/dpmapi.jar:system/framework/dpmapi.jar \
     vendor/oneplus/oneplus2/proprietary/framework/qti-telephony-common.jar:system/framework/qti-telephony-common.jar \
     vendor/oneplus/oneplus2/proprietary/framework/tcmclient.jar:system/framework/tcmclient.jar \
+	vendor/oneplus/oneplus2/proprietary/framework/org.codeaurora.camera.jar:/system/framework/org.codeaurora.camera.jar \
     vendor/oneplus/oneplus2/proprietary/lib/hw/camera.vendor.msm8994.so:system/lib/hw/camera.vendor.msm8994.so \
     vendor/oneplus/oneplus2/proprietary/lib/hw/fingerprint.msm8994.so:system/lib/hw/fingerprint.msm8994.so \
     vendor/oneplus/oneplus2/proprietary/lib/libFNVfbEngineLib.so:system/lib/libFNVfbEngineLib.so \
@@ -532,3 +533,16 @@ PRODUCT_PACKAGES += \
     qcnvitems \
     qcrilhook \
     pp_calib_data_jd35695_1080p_cmd_mode_dsi_panel
+
+# OxygenOS 3 Camera
+PRODUCT_PACKAGES += \
+    libfilter-sdk \
+    libopbaselib \
+    libopcameralib \
+    libopcamera \
+    lib-imscamera \
+    libimscamera_jni \
+    libimsmedia_jni \
+    secure_camera_sample_client \
+    OnePlusCamera \
+    OnePlusCameraService
