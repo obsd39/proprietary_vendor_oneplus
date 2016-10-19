@@ -53,20 +53,6 @@ endif
 
 include $(BUILD_PREBUILT)
 
-# libopcameralib.so
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libopcameralib
-LOCAL_SRC_FILES := proprietary/lib/libopcameralib.so
-include $(PREBUILT_SHARED_LIBRARY)
-
-# libopcamera.so
-
-include $(CLEAR_VARS)
-LOCAL_MODULE := libopcamera
-LOCAL_SRC_FILES := proprietary/lib/libopcamera.so
-include $(PREBUILT_SHARED_LIBRARY)
-
 ### BIN
 
 # secure_camera_sample_client
@@ -84,16 +70,33 @@ include $(BUILD_PREBUILT)
 # OnePlusCamera.apk
 include $(CLEAR_VARS)
 
-LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := OnePlusCamera
-LOCAL_CERTIFICATE := PRESIGNED
-LOCAL_SRC_FILES := proprietary/priv-app/OnePlusCamera/OnePlusCamera.apk
-LOCAL_MODULE_CLASS := APPS
-LOCAL_PRIVILEGED_MODULE := true
+LOCAL_OnePlusCamera_PROPR_DIR := $(LOCAL_PATH)/proprietary
+LOCAL_OnePlusCamera_SRC_FILES := \
+	$(LOCAL_OnePlusCamera_PROPR_DIR)/priv-app/OnePlusCamera/OnePlusCamera.apk
+LOCAL_OnePlusCamera_OUT_FILE := $(OUT)/system/priv-app/OnePlusCamera/OnePlusCamera.apk
+LOCAL_MODULE_TAGS := optional
 LOCAL_OVERRIDES_PACKAGES := Snap Camera Camera2
-LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+PRODUCT_PACKAGES := $(filter-out $(LOCAL_OVERRIDES_PACKAGES),$(PRODUCT_PACKAGES))
+LOCAL_OnePlusCamera_LIB_DEPENDENCIES := \
+	libopcamera.so \
+	libopcameralib.so
 
-include $(BUILD_PREBUILT)
+$(LOCAL_OnePlusCamera_OUT_FILE):
+	mkdir -p $(OUT)/system/priv-app/OnePlusCamera/lib/arm
+	mkdir -p $(OUT)/system/priv-app/OnePlusCamera/lib/arm64
+	cp $(LOCAL_OnePlusCamera_SRC_FILES) \
+		$(LOCAL_OnePlusCamera_OUT_FILE)
+	for lib in $(LOCAL_OnePlusCamera_LIB_DEPENDENCIES); do \
+	  [ -f $(LOCAL_OnePlusCamera_PROPR_DIR)/lib64/$$lib ] && \
+	    cp $(LOCAL_OnePlusCamera_PROPR_DIR)/lib64/$$lib $(OUT)/system/priv-app/OnePlusCamera/lib/arm64/$$lib; \
+  	  [ -f $(LOCAL_OnePlusCamera_PROPR_DIR)/lib/$$lib ] && \
+		cp $(LOCAL_OnePlusCamera_PROPR_DIR)/lib/$$lib $(OUT)/system/priv-app/OnePlusCamera/lib/arm/$$lib; \
+	done
+
+$(LOCAL_MODULE): | $(LOCAL_OnePlusCamera_OUT_FILE)
+$(LOCAL_SRC_FILES): | $(LOCAL_MODULE)
+.PHONY: $(LOCAL_OnePlusCamera_OUT_FILE)
 
 ### VENDOR
 
