@@ -99,13 +99,11 @@ OnePlusCameraRule:
 	mkdir -p $(OUT)/system/priv-app/OnePlusCamera/lib/arm64
 	for lib in $(LOCAL_OnePlusCamera_LIB_DEPENDENCIES); do \
 	  [ -f $(LOCAL_OnePlusCamera_PROPR_DIR)/lib64/$$lib ] && \
-	    inst_opcam_outarm_lib64="$(OUT)/system/priv-app/OnePlusCamera/lib/arm64/$$lib"; \
-	    cp $(LOCAL_OnePlusCamera_PROPR_DIR)/lib64/$$lib $$inst_opcam_outarm_lib64; \
-	    echo "Install: $$inst_opcam_outarm_lib64"; \
+	    cp $(LOCAL_OnePlusCamera_PROPR_DIR)/lib64/$$lib $(OUT)/system/priv-app/OnePlusCamera/lib/arm64/$$lib; \
+	    echo "Install: $(OUT)/system/priv-app/OnePlusCamera/lib/arm64/$$lib"; \
   	  [ -f $(LOCAL_OnePlusCamera_PROPR_DIR)/lib/$$lib ] && \
-	    inst_opcam_outarm_lib="$(OUT)/system/priv-app/OnePlusCamera/lib/arm/$$lib"; \
-		cp $(LOCAL_OnePlusCamera_PROPR_DIR)/lib/$$lib $inst_opcam_outarm_lib; \
-		echo "Install: $$inst_opcam_outarm_lib"; \
+		cp $(LOCAL_OnePlusCamera_PROPR_DIR)/lib/$$lib $(OUT)/system/priv-app/OnePlusCamera/lib/arm/$$lib; \
+		echo "Install: $(OUT)/system/priv-app/OnePlusCamera/lib/arm/$$lib"; \
 	done
 
 $(LOCAL_MODULE): OnePlusCameraRule
