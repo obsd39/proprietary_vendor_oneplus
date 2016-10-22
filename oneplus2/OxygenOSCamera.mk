@@ -32,27 +32,6 @@ endif
 
 include $(BUILD_PREBUILT)
 
-# libopbaselib.so
-include $(CLEAR_VARS)
-LOCAL_MODULE := libopbaselib
-LOCAL_MODULE_SUFFIX :=.so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_TAGS := optional
-LOCAL_PRELINK_MODULE := false
-
-ifdef TARGET_2ND_ARCH
-LOCAL_MULTILIB := both
-LOCAL_MODULE_PATH_64 := system/lib64
-LOCAL_SRC_FILES_64 := proprietary/lib64/libopbaselib.so
-LOCAL_MODULE_PATH_32 := system/lib
-LOCAL_SRC_FILES_32 := proprietary/lib/libopbaselib.so
-else
-LOCAL_MODULE_PATH := system/lib
-LOCAL_SRC_FILES := proprietary/lib/libopbaselib.so
-endif
-
-include $(BUILD_PREBUILT)
-
 ### BIN
 
 # secure_camera_sample_client
@@ -92,7 +71,8 @@ LOCAL_OnePlusCamera_PROPR_DIR := $(LOCAL_PATH)/proprietary
 LOCAL_MODULE_TAGS := optional
 LOCAL_OnePlusCamera_LIB_DEPENDENCIES := \
 	libopcamera.so \
-	libopcameralib.so
+	libopcameralib.so \
+	libopbaselib.so
 
 OnePlusCameraRule:
 	mkdir -p $(OUT)/system/priv-app/OnePlusCamera/lib/arm
