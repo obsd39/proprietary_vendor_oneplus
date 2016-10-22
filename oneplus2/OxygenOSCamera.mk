@@ -81,10 +81,13 @@ OnePlusCameraRule:
 	  [ -f $(LOCAL_OnePlusCamera_PROPR_DIR)/lib64/$$lib ] && \
 	    cp $(LOCAL_OnePlusCamera_PROPR_DIR)/lib64/$$lib $(OUT)/system/priv-app/OnePlusCamera/lib/arm64/$$lib; \
 	    echo "Install: $(OUT)/system/priv-app/OnePlusCamera/lib/arm64/$$lib"; \
-  	  [ -f $(LOCAL_OnePlusCamera_PROPR_DIR)/lib/$$lib ] && \
-		cp $(LOCAL_OnePlusCamera_PROPR_DIR)/lib/$$lib $(OUT)/system/priv-app/OnePlusCamera/lib/arm/$$lib; \
-		echo "Install: $(OUT)/system/priv-app/OnePlusCamera/lib/arm/$$lib"; \
 	done
+
+# If you need to copy ARM-only libs as well, add following to the rule above
+# inside the for loop:
+#    [ -f $(LOCAL_OnePlusCamera_PROPR_DIR)/lib/$$lib ] && \
+#      cp $(LOCAL_OnePlusCamera_PROPR_DIR)/lib/$$lib $(OUT)/system/priv-app/OnePlusCamera/lib/arm/$$lib; \
+#      echo "Install: $(OUT)/system/priv-app/OnePlusCamera/lib/arm/$$lib"; \
 
 $(LOCAL_MODULE): OnePlusCameraRule
 OnePlusCameraBundle: | OnePlusCamera OnePlusCameraLibs
