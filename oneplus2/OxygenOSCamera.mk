@@ -75,7 +75,7 @@ LOCAL_OnePlusCamera_LIB_DEPENDENCIES := \
 	libopbaselib.so
 
 OnePlusCameraRule:
-	mkdir -p $(OUT)/system/priv-app/OnePlusCamera/lib/arm
+#	mkdir -p $(OUT)/system/priv-app/OnePlusCamera/lib/arm
 	mkdir -p $(OUT)/system/priv-app/OnePlusCamera/lib/arm64
 	for lib in $(LOCAL_OnePlusCamera_LIB_DEPENDENCIES); do \
 	  [ -f $(LOCAL_OnePlusCamera_PROPR_DIR)/lib64/$$lib ] && \
