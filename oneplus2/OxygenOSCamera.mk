@@ -90,7 +90,7 @@ OnePlusCameraRule:
 #      echo "Install: $(OUT)/system/priv-app/OnePlusCamera/lib/arm/$$lib"; \
 
 $(LOCAL_MODULE): OnePlusCameraRule
-OnePlusCameraBundle: | OnePlusCamera OnePlusCameraLibs
+OnePlusCameraBundle: OnePlusCamera OnePlusCameraLibs
 all: $(LOCAL_MODULE)
 .PHONY: $(LOCAL_MODULE)
 
