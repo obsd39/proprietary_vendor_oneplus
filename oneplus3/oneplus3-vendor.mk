@@ -854,6 +854,10 @@ PRODUCT_PACKAGES += \
     colorservice \
     ims \
     imssettings \
+    libts_detected_face_hal \
+    libts_detected_face_jni \
+    libts_face_beautify_hal \
+    libts_face_beautify_jni \
     qcnvitems \
     qcrilhook
 endif
