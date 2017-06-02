@@ -423,10 +423,23 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/oneplus3/proprietary/vendor/lib64/libremosaic_daemon.so:system/vendor/lib64/libremosaic_daemon.so \
     vendor/oneplus/oneplus3/proprietary/vendor/lib64/libremosaic_tuning.so:system/vendor/lib64/libremosaic_tuning.so \
     vendor/oneplus/oneplus3/proprietary/vendor/lib64/libremosaiclib.so:system/vendor/lib64/libremosaiclib.so \
+    vendor/oneplus/oneplus3/proprietary/bin/iop:system/bin/iop \
+    vendor/oneplus/oneplus3/proprietary/etc/permissions/com.qualcomm.qti.Performance.xml:system/etc/permissions/com.qualcomm.qti.Performance.xml \
+    vendor/oneplus/oneplus3/proprietary/lib/libqti-iop.so:system/lib/libqti-iop.so \
+    vendor/oneplus/oneplus3/proprietary/lib/libqti-iop-client.so:system/lib/libqti-iop-client.so \
+    vendor/oneplus/oneplus3/proprietary/lib/libqti_performance.so:system/lib/libqti_performance.so \
+    vendor/oneplus/oneplus3/proprietary/lib64/libqti-iop.so:system/lib64/libqti-iop.so \
+    vendor/oneplus/oneplus3/proprietary/lib64/libqti-iop-client.so:system/lib64/libqti-iop-client.so \
+    vendor/oneplus/oneplus3/proprietary/lib64/libqti_performance.so:system/lib64/libqti_performance.so \
     vendor/oneplus/oneplus3/proprietary/vendor/lib64/qfp.wakeup.so:system/vendor/lib64/qfp.wakeup.so
 
 PRODUCT_PACKAGES += \
-    dashd
+    dashd \
+    SprintDM \
+    QPerformance
+
+# Preloading QPerformance jar to ensure faster perflocks in Boost Framework
+PRODUCT_BOOT_JARS += QPerformance
 
 ifeq ($(QCPATH),)
 PRODUCT_COPY_FILES += \
@@ -848,7 +861,6 @@ endif
 -include vendor/extra/devices.mk
 ifneq ($(call is-qc-perf-target),true)
 PRODUCT_COPY_FILES += \
-    vendor/oneplus/oneplus3/proprietary/bin/iop:system/bin/iop \
     vendor/oneplus/oneplus3/proprietary/vendor/bin/perfd:system/vendor/bin/perfd \
     vendor/oneplus/oneplus3/proprietary/vendor/etc/perf-profile0.conf:system/vendor/etc/perf-profile0.conf \
     vendor/oneplus/oneplus3/proprietary/vendor/etc/perf-profile1.conf:system/vendor/etc/perf-profile1.conf \
