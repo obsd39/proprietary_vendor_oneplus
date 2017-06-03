@@ -75,7 +75,8 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/bacon/proprietary/vendor/lib/libmmqjpeg_codec.so:system/vendor/lib/libmmqjpeg_codec.so \
     vendor/oneplus/bacon/proprietary/vendor/lib/liboemcamera.so:system/vendor/lib/liboemcamera.so \
     vendor/oneplus/bacon/proprietary/vendor/lib/libqomx_jpegdec.so:system/vendor/lib/libqomx_jpegdec.so \
-    vendor/oneplus/bacon/proprietary/vendor/lib/libqomx_jpegenc.so:system/vendor/lib/libqomx_jpegenc.so
+    vendor/oneplus/bacon/proprietary/vendor/lib/libqomx_jpegenc.so:system/vendor/lib/libqomx_jpegenc.so \
+    vendor/oneplus/bacon/proprietary/bin/iop:system/bin/iop
 
 ifeq ($(QCPATH),)
 PRODUCT_COPY_FILES += \
@@ -106,6 +107,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/bacon/proprietary/etc/firmware/venus.mdt:system/etc/firmware/venus.mdt \
     vendor/oneplus/bacon/proprietary/etc/permissions/qcnvitems.xml:system/etc/permissions/qcnvitems.xml \
     vendor/oneplus/bacon/proprietary/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
+    vendor/oneplus/bacon/proprietary/etc/permissions/com.qualcomm.qti.Performance.xml:system/etc/permissions/com.qualcomm.qti.Performance.xml \
     vendor/oneplus/bacon/proprietary/framework/qcnvitems.jar:system/framework/qcnvitems.jar \
     vendor/oneplus/bacon/proprietary/framework/qcrilhook.jar:system/framework/qcrilhook.jar \
     vendor/oneplus/bacon/proprietary/framework/qti-telephony-common.jar:system/framework/qti-telephony-common.jar \
@@ -113,6 +115,9 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/bacon/proprietary/lib/libloc_ds_api.so:system/lib/libloc_ds_api.so \
     vendor/oneplus/bacon/proprietary/lib/libwcnss_qmi.so:system/lib/libwcnss_qmi.so \
     vendor/oneplus/bacon/proprietary/lib/libdrmdecrypt.so:system/lib/libdrmdecrypt.so \
+    vendor/oneplus/bacon/proprietary/lib/libqti-iop.so:system/lib/libqti-iop.so \
+    vendor/oneplus/bacon/proprietary/lib/libqti-iop-client.so:system/lib/libqti-iop-client.so \
+    vendor/oneplus/bacon/proprietary/lib/libqti_performance.so:system/lib/libqti_performance.so \
     vendor/oneplus/bacon/proprietary/vendor/bin/thermal-engine:system/vendor/bin/thermal-engine \
     vendor/oneplus/bacon/proprietary/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
     vendor/oneplus/bacon/proprietary/vendor/lib/egl/eglsubAndroid.so:system/vendor/lib/egl/eglsubAndroid.so \
@@ -209,5 +214,9 @@ PRODUCT_PACKAGES += \
     libtime_genoff \
     TimeService \
     shutdownlistener \
-    qcrilmsgtunnel
+    qcrilmsgtunnel \
+    pp_calib_data_jd35695_1080p_cmd_mode_dsi_panel \
+    QPerformance
 endif
+
+PRODUCT_BOOT_JARS += QPerformance
