@@ -85,7 +85,6 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/bacon/proprietary/bin/hci_qcomm_init:system/bin/hci_qcomm_init \
     vendor/oneplus/bacon/proprietary/bin/irsc_util:system/bin/irsc_util \
     vendor/oneplus/bacon/proprietary/bin/loc_launcher:system/bin/loc_launcher \
-    vendor/oneplus/bacon/proprietary/bin/mpdecision:system/bin/mpdecision \
     vendor/oneplus/bacon/proprietary/bin/netmgrd:system/bin/netmgrd \
     vendor/oneplus/bacon/proprietary/bin/qmuxd:system/bin/qmuxd \
     vendor/oneplus/bacon/proprietary/bin/qseecomd:system/bin/qseecomd \
