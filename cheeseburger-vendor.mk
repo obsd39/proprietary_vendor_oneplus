@@ -166,6 +166,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/cheeseburger/proprietary/framework/tcmclient.jar:system/framework/tcmclient.jar \
     vendor/oneplus/cheeseburger/proprietary/lib64/hw/fingerprint.msm8998.so:system/lib64/hw/fingerprint.msm8998.so \
     vendor/oneplus/cheeseburger/proprietary/lib64/lib_fpc_tac_shared.so:system/lib64/lib_fpc_tac_shared.so \
+    vendor/oneplus/cheeseburger/proprietary/lib64/libjson.so:system/lib64/libjson.so \
     vendor/oneplus/cheeseburger/proprietary/lib64/libloc_ds_api.so:system/lib64/libloc_ds_api.so \
     vendor/oneplus/cheeseburger/proprietary/lib64/libOmxVpp.so:system/lib64/libOmxVpp.so \
     vendor/oneplus/cheeseburger/proprietary/lib64/libparam.so:system/lib64/libparam.so \
@@ -184,6 +185,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/cheeseburger/proprietary/lib/lib_oneplus_facebeauty.so:system/lib/lib_oneplus_facebeauty.so \
     vendor/oneplus/cheeseburger/proprietary/lib/lib_oneplus_md.so:system/lib/lib_oneplus_md.so \
     vendor/oneplus/cheeseburger/proprietary/lib/lib_oneplus_watermark.so:system/lib/lib_oneplus_watermark.so \
+    vendor/oneplus/cheeseburger/proprietary/lib/libjson.so:system/lib/libjson.so \
     vendor/oneplus/cheeseburger/proprietary/lib/libopcamera_crypt.so:system/lib/libopcamera_crypt.so \
     vendor/oneplus/cheeseburger/proprietary/lib/libopcameralib.so:system/lib/libopcameralib.so \
     vendor/oneplus/cheeseburger/proprietary/lib/libopcamera_native_modules.so:system/lib/libopcamera_native_modules.so \
