@@ -134,7 +134,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/cheeseburger/proprietary/etc/permissions/com.qti.snapdragon.sdk.display.xml:system/etc/permissions/com.qti.snapdragon.sdk.display.xml \
     vendor/oneplus/cheeseburger/proprietary/etc/permissions/com.qualcomm.location.vzw_library.xml:system/etc/permissions/com.qualcomm.location.vzw_library.xml \
     vendor/oneplus/cheeseburger/proprietary/etc/permissions/com.qualcomm.location.xml:system/etc/permissions/com.qualcomm.location.xml \
-    vendor/oneplus/oneplus2/proprietary/etc/permissions/com.qualcomm.qti.Performance.xml:system/etc/permissions/com.qualcomm.qti.Performance.xml \
+    vendor/oneplus/cheeseburger/proprietary/etc/permissions/com.qualcomm.qti.Performance.xml:system/etc/permissions/com.qualcomm.qti.Performance.xml \
     vendor/oneplus/cheeseburger/proprietary/etc/permissions/com.quicinc.cne.xml:system/etc/permissions/com.quicinc.cne.xml \
     vendor/oneplus/cheeseburger/proprietary/etc/permissions/ConnectivityExt.xml:system/etc/permissions/ConnectivityExt.xml \
     vendor/oneplus/cheeseburger/proprietary/etc/permissions/dpmapi.xml:system/etc/permissions/dpmapi.xml \
@@ -331,7 +331,8 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/cheeseburger/proprietary/vendor/lib64/libQSEEComAPI.so:system/vendor/lib64/libQSEEComAPI.so \
     vendor/oneplus/cheeseburger/proprietary/vendor/lib64/libqseed3.so:system/vendor/lib64/libqseed3.so \
     vendor/oneplus/cheeseburger/proprietary/vendor/lib64/libqti-iop-client.so:system/vendor/lib64/libqti-iop-client.so \
-    vendor/oneplus/cheeseburger/proprietary/vendor/lib64/libqti-iop.so:system/vendor/lib64/libqti-iop.so \
+    vendor/oneplus/cheeseburger/proprietary/vendor/lib64/libqti-iop.so:system/lib64/libqti-iop.so \
+    vendor/oneplus/cheeseburger/proprietary/vendor/lib64/libqti_performance.so:system/lib64/libqti_performance.so \
     vendor/oneplus/cheeseburger/proprietary/vendor/lib64/libqti-perfd-client.so:system/vendor/lib64/libqti-perfd-client.so \
     vendor/oneplus/cheeseburger/proprietary/vendor/lib64/libQtiTether.so:system/vendor/lib64/libQtiTether.so \
     vendor/oneplus/cheeseburger/proprietary/vendor/lib64/libqti-util.so:system/vendor/lib64/libqti-util.so \
@@ -655,7 +656,8 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/cheeseburger/proprietary/vendor/lib/libQSEEComAPI.so:system/vendor/lib/libQSEEComAPI.so \
     vendor/oneplus/cheeseburger/proprietary/vendor/lib/libqseed3.so:system/vendor/lib/libqseed3.so \
     vendor/oneplus/cheeseburger/proprietary/vendor/lib/libqti-iop-client.so:system/vendor/lib/libqti-iop-client.so \
-    vendor/oneplus/cheeseburger/proprietary/vendor/lib/libqti-iop.so:system/vendor/lib/libqti-iop.so \
+    vendor/oneplus/cheeseburger/proprietary/vendor/lib/libqti-iop.so:system/lib/libqti-iop.so \
+    vendor/oneplus/cheeseburger/proprietary/vendor/lib/libqti_performance.so:system/lib/libqti_performance.so \
     vendor/oneplus/cheeseburger/proprietary/vendor/lib/libqti-perfd-client.so:system/vendor/lib/libqti-perfd-client.so \
     vendor/oneplus/cheeseburger/proprietary/vendor/lib/libqti-util.so:system/vendor/lib/libqti-util.so \
     vendor/oneplus/cheeseburger/proprietary/vendor/lib/libqti-utils.so:system/vendor/lib/libqti-utils.so \
@@ -724,7 +726,8 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/cheeseburger/proprietary/vendor/lib/soundfx/libqcbassboost.so:system/vendor/lib/soundfx/libqcbassboost.so \
     vendor/oneplus/cheeseburger/proprietary/vendor/lib/soundfx/libqcreverb.so:system/vendor/lib/soundfx/libqcreverb.so \
     vendor/oneplus/cheeseburger/proprietary/vendor/lib/soundfx/libqcvirt.so:system/vendor/lib/soundfx/libqcvirt.so \
-    vendor/oneplus/cheeseburger/proprietary/vendor/qcril.db:system/vendor/qcril.db
+    vendor/oneplus/cheeseburger/proprietary/vendor/qcril.db:system/vendor/qcril.db \
+    vendor/oneplus/cheeseburger/proprietary/framework/QPerformance.jar:system/framework/QPerformance.jar
 
 PRODUCT_PACKAGES += \
    CNEService \
