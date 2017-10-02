@@ -26,6 +26,9 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/bacon/proprietary/vendor/lib/libactuator_dw9714_camcorder.so:system/vendor/lib/libactuator_dw9714_camcorder.so \
     vendor/oneplus/bacon/proprietary/vendor/lib/libactuator_dw9714_camera.so:system/vendor/lib/libactuator_dw9714_camera.so \
     vendor/oneplus/bacon/proprietary/vendor/lib/libAKM8963.so:system/vendor/lib/libAKM8963.so \
+    vendor/oneplus/bacon/proprietary/vendor/lib/libaptX-1.0.0-rel-Android21-ARMv7A.so:system/lib/libaptX_encoder.so \
+    vendor/oneplus/bacon/proprietary/vendor/lib/libaptXHD-1.0.0-rel-Android21-ARMv7A.so:system/lib/libaptXHD_encoder.so \
+    vendor/oneplus/bacon/proprietary/vendor/lib/libaptXScheduler.so:system/lib/libaptXScheduler.so \
     vendor/oneplus/bacon/proprietary/vendor/lib/libchromatix_imx214_common.so:system/vendor/lib/libchromatix_imx214_common.so \
     vendor/oneplus/bacon/proprietary/vendor/lib/libchromatix_imx214_default_video.so:system/vendor/lib/libchromatix_imx214_default_video.so \
     vendor/oneplus/bacon/proprietary/vendor/lib/libchromatix_imx214_hfr_120.so:system/vendor/lib/libchromatix_imx214_hfr_120.so \
