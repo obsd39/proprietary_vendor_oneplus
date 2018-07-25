@@ -23,6 +23,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/sdm845-common/proprietary/lib/com.qualcomm.qti.ant@1.0.so:system/lib/com.qualcomm.qti.ant@1.0.so \
     vendor/oneplus/sdm845-common/proprietary/lib/vendor.qti.hardware.iop@2.0.so:system/lib/vendor.qti.hardware.iop@2.0.so \
     vendor/oneplus/sdm845-common/proprietary/lib64/com.qualcomm.qti.ant@1.0.so:system/lib64/com.qualcomm.qti.ant@1.0.so \
+    vendor/oneplus/sdm845-common/proprietary/lib64/hw/hwcomposer.qcom.so:system/lib64/hw/hwcomposer.qcom.so \
     vendor/oneplus/sdm845-common/proprietary/lib64/lib-imsvideocodec.so:system/lib64/lib-imsvideocodec.so \
     vendor/oneplus/sdm845-common/proprietary/lib64/lib-imsvt.so:system/lib64/lib-imsvt.so \
     vendor/oneplus/sdm845-common/proprietary/lib64/lib-imsvtextutils.so:system/lib64/lib-imsvtextutils.so \
