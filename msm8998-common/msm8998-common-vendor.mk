@@ -700,6 +700,7 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/msm8998-common/proprietary/vendor/lib/libmmcamera_imglib_faceproc_adspstub.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_imglib_faceproc_adspstub.so \
     vendor/oneplus/msm8998-common/proprietary/vendor/lib/libmmcamera_imx350.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_imx350.so \
     vendor/oneplus/msm8998-common/proprietary/vendor/lib/libmmcamera_imx350_gt24c64ass_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_imx350_gt24c64ass_eeprom.so \
+    vendor/oneplus/msm8998-common/proprietary/vendor/lib/libmmcamera_imx371.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_imx371.so \
     vendor/oneplus/msm8998-common/proprietary/vendor/lib/libmmcamera_imx376k.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_imx376k.so \
     vendor/oneplus/msm8998-common/proprietary/vendor/lib/libmmcamera_imx376k_gt24c64_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_imx376k_gt24c64_eeprom.so \
     vendor/oneplus/msm8998-common/proprietary/vendor/lib/libmmcamera_imx398_gt24c64_eeprom.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmmcamera_imx398_gt24c64_eeprom.so \
