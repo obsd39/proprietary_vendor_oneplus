@@ -1242,7 +1242,6 @@ PRODUCT_PACKAGES += \
     libloc_api_v02 \
     SoterService \
     WfdService \
-    com.qualcomm.location \
     dpmserviceapp \
     PowerOffAlarm \
     TimeService \
