@@ -16,6 +16,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter guacamole guacamoleb guacamoleg hotdog hotdogb,$(TARGET_DEVICE)),)
+ifneq ($(filter guacamole guacamoleb guacamoleg hotdog hotdogg hotdogb,$(TARGET_DEVICE)),)
 
 endif
